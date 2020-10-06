@@ -24,6 +24,26 @@ Resources:
             Path: /hello
             Method: get
 
+#  BasicAWSApiGateway:
+#    Type: AWS::Serverless::Api
+#    Properties:
+#      Name: Basic AWS Api Gateway
+#      StageName: Staging
+#
+#  HelloWorldFunction:
+#    Type: AWS::Serverless::Function
+#    Properties:
+#      CodeUri: hello_world/
+#      Handler: app.lambda_handler
+#      Runtime: python3.7
+#      Events:
+#        HelloWorldApi:
+#          Type: Api
+#          Properties:
+#            RestApiId: !Ref BasicAWSApiGateway
+#            Path: /hello
+#            Method: GET
+
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
