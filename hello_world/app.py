@@ -28,25 +28,14 @@ def create_user():
     # We'll echo the json body back to the user in a 'user' key.
     return {'user': user_as_json}
 
-
-# The view function above will return {"hello": "world"}
-# whenever you make an HTTP GET request to '/'.
-#
-# Here are a few more examples:
-#
-# @app.route('/hello/{name}')
-# def hello_name(name):
-#    # '/hello/james' -> {"hello": "james"}
-#    return {'hello': name}
-#
-# @app.route('/users', methods=['POST'])
-# def create_user():
-#     # This is the JSON body the user sent in their POST request.
-#     user_as_json = app.current_request.json_body
-#     # We'll echo the json body back to the user in a 'user' key.
-#     return {'user': user_as_json}
-#
-# See the README documentation for more examples.
+#current_request.query_params - A dict of the query params.
+# current_request.headers - A dict of the request headers.
+# current_request.uri_params - A dict of the captured URI params.
+# current_request.method - The HTTP method (as a string).
+# current_request.json_body - The parsed JSON body.
+# current_request.raw_body - The raw HTTP body as bytes.
+# current_request.context - A dict of additional context information
+# current_request.stage_vars - Configuration for the API Gateway stage
 #
 
 
